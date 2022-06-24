@@ -13,10 +13,7 @@ app.use(morgan("combined"));
 app.use(corse());
 
 app.use(express.static(path.join(__dirname+publicFolder)))
-console.log(path.join(__dirname+publicFolder));
-
-/*
 app.use(route_sale);
-app.use(route_sneaker);*/
+app.use(route_sneaker);
 
 export = app;

@@ -1,0 +1,1 @@
+export type Order={ model: String; brand: String; price: Number; name: String,size:number };

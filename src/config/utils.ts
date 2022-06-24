@@ -30,6 +30,7 @@ const tablesName={
   Sales:"Sales"
 }
 
+
 const SortRulDB={
   date:{"createdAt":"asc"}
 }
@@ -41,7 +42,7 @@ const messages = {
   notaut: "You are not autorized",
   fileError:"Wrong format file, is not an image"
 };
-
+const publicFolder="/../public";
 const fileDestination="public/images";
 const env = process.env;
 const dbhost=/**/env.MONGODB_REMOTE//
@@ -55,5 +56,6 @@ export default {
   fileDestination,
   dbhost,
   tablesName,
-  SortRulDB
+  SortRulDB,
+  publicFolder
 };

@@ -30,6 +30,11 @@ const tablesName={
   Sales:"Sales"
 }
 
+const SortRulDB={
+  date:{"createdAt":"asc"}
+}
+
+
 const messages = {
   badReq: "Fields missing",
   create: "Created succesfully",
@@ -49,5 +54,6 @@ export default {
   ServerResponse,
   fileDestination,
   dbhost,
-  tablesName
+  tablesName,
+  SortRulDB
 };

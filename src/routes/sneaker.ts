@@ -4,7 +4,7 @@ import model from "../model/sneacker";
 import config from "../config/utils";
 import { validSneaker } from "../middleware/valid_sneaker";
 import { validAdmin } from "../middleware/validadmin";
-const { routes_name, sneakerModel ,SortRulDB} = { ...config, ...model };
+const { routes_name, sneakerModel ,SortRulDB,limitDB} = { ...config, ...model };
 
 const route = express.Router();
 
@@ -18,7 +18,7 @@ route
   .post(validAdmin, validSneaker, (req, res) =>
     db.create(sneakerModel, req.body, res)
   )
-  .get((_, res) => db.read(sneakerModel, res,SortRulDB.date))
+  .get((_, res) => db.read(sneakerModel, res,SortRulDB.date,limitDB))
   .put(validAdmin, validSneaker, (req, res) =>
     db.update(sneakerModel, req.body, res)
   );

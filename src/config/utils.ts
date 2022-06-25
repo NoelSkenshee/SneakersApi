@@ -35,6 +35,10 @@ const SortRulDB={
   date:{"createdAt":"asc"}
 }
 
+const limitDB=10;
+
+
+
 
 const messages = {
   badReq: "Fields missing",
@@ -57,5 +61,6 @@ export default {
   dbhost,
   tablesName,
   SortRulDB,
-  publicFolder
+  publicFolder,
+  limitDB
 };

@@ -33,13 +33,14 @@ export default {
       .catch((err) =>ServerResponse.response(err, res, codes.server, null, true) );
   },
 
-  read: (model: Model<any>, res: any,sortRul?:any) => {///READER
+  read: (model: Model<any>, res: any,sortRul?:any,limit?:number) => {///READER
     if (!dbhost) return;
     connect(dbhost)
       .then(() => {
         model
           .find({})
           .sort(sortRul)
+          .limit(limit||0)
           .then((data) => {
             ServerResponse.response("", res, codes.success, data, false);
             disconnect();

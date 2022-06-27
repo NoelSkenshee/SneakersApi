@@ -32,7 +32,7 @@ const tablesName={
 
 
 const SortRulDB={
-  date:{"createdAt":"asc"}
+  date:{"createdAt":"descending"}
 }
 
 const limitDB=10;

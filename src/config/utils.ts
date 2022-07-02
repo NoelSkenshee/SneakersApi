@@ -23,7 +23,9 @@ const codes = {
      
 const routes_name = {
   sale: "/sale",
-  sneaker:"/sneaker"
+  sneaker:"/sneaker",
+  sneakerId:"/sneaker/:id"
+
 }; 
 const tablesName={
   Sneakers:"Sneakers",
@@ -44,7 +46,8 @@ const messages = {
   badReq: "Fields missing",
   create: "Created succesfully",
   notaut: "You are not autorized",
-  fileError:"Wrong format file, is not an image"
+  fileError:"Wrong format file, is not an image",
+  id_req:" Parameter id is required "
 };
 const publicFolder="/../public";
 const fileDestination="public/images";

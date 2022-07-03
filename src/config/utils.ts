@@ -1,4 +1,3 @@
-
 const ServerResponse = {
   response: (
     message: string,
@@ -20,39 +19,41 @@ const codes = {
   success: 200,
   notaut: 401,
 };
-     
+
 const routes_name = {
   sale: "/sale",
-  sneaker:"/sneaker",
-  sneakerId:"/sneaker/:id"
+  sneaker: "/sneaker",
+  sneakerId: "/sneaker/:id",
+};
 
-}; 
-const tablesName={
-  Sneakers:"Sneakers",
-  Sales:"Sales"
-}
+const public_routes:any= {
+  "/menu": "/menu",
+  "/cart": "/cart",
+  "/details": "/details",
+};
 
+const tablesName = {
+  Sneakers: "Sneakers",
+  Sales: "Sales",
+};
 
-const SortRulDB={
-  date:{"createdAt":"descending"}
-}
+const SortRulDB = {
+  date: { createdAt: "descending" },
+};
 
-const limitDB=10;
-
-
-
+const limitDB = 10;
 
 const messages = {
   badReq: "Fields missing",
   create: "Created succesfully",
   notaut: "You are not autorized",
-  fileError:"Wrong format file, is not an image",
-  id_req:" Parameter id is required "
+  fileError: "Wrong format file, is not an image",
+  id_req: " Parameter id is required ",
 };
-const publicFolder="/../public";
-const fileDestination="public/images";
+const publicFolder = "/../public";
+const fileDestination = "public/images";
 const env = process.env;
-const dbhost=/**/env.MONGODB_REMOTE//
+const dbhost = /**/ env.MONGODB_REMOTE; //
 
 export default {
   codes,
@@ -65,5 +66,6 @@ export default {
   tablesName,
   SortRulDB,
   publicFolder,
-  limitDB
+  limitDB,
+  public_routes
 };

@@ -40,6 +40,7 @@ const SaleSchema = new Schema(
     email: {
       type: String,
       required: true,
+      unique:false
     },
     totalPay: {
       type: Number,

@@ -21,5 +21,5 @@ export const validSale = (req: any, res: any, next: Function) => {
       null,
       true
     );
-  next();
+    else next();
 };

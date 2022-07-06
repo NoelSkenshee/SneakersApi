@@ -50,7 +50,9 @@ const messages = {
   fileError: "Wrong format file, is not an image",
   id_req: " Parameter id is required ",
 };
-const publicFolder = "/../public";
+const publicFolderVue = "/../public/vue/dist";
+const publicFolderNG = "/../public/angular";
+
 const fileDestination = "public/images";
 const env = process.env;
 const dbhost = /**/ env.MONGODB_REMOTE; //
@@ -65,7 +67,8 @@ export default {
   dbhost,
   tablesName,
   SortRulDB,
-  publicFolder,
+  publicFolderVue,
+  publicFolderNG,
   limitDB,
   public_routes
 };
